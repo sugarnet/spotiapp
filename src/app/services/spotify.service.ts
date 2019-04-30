@@ -13,9 +13,11 @@ export class SpotifyService {
   }
 
   getHeaders(): HttpHeaders {
-    return new HttpHeaders({
+    let headers = new HttpHeaders({
       Authorization: `Bearer ${ this.token }`
     });
+
+    return headers;
   }
 
   getNewReleases() {
@@ -24,7 +26,7 @@ export class SpotifyService {
   }
   
   getArtista(termino: string) {
-    return this.http.get(`https://api.spotify.com/v1/search?q=${ termino }&type=artist&limit=15`, { headers })
+    return this.http.get(`https://api.spotify.com/v1/search?q=${ termino }&type=artist&limit=15`, { getHeaders() })
             .pipe( map( data => data['artists'].items ) );
   }
 }
