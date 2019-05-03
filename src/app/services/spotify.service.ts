@@ -8,7 +8,7 @@ import { Source } from 'webpack-sources';
 })
 export class SpotifyService {
 
-  token = 'BQA3wxFp-YblOVsqF1dPgk-6zkBgSyzHt36RDyHftNkmQA4a-X68YgNKl3ObEG5lcy-ZiykOam_lYZBPOR0';
+  token = 'BQCQE8p6mqXdi7DgDKf0C_33EWzVLjazTaOHolGD4vWd9EUWTuhrg2n_wFfR-LUIADj38CUzdy_Mx-IBigc';
 
   constructor( private http: HttpClient ) {
   }
@@ -35,5 +35,10 @@ export class SpotifyService {
 
   getArtista( id: string ) {
     return this.getQuery(`artists/${ id }`);
+  }
+
+  getTopTracks( id: string ) {
+    return this.getQuery(`artists/${ id }/top-tracks?country=es`)
+            .pipe( map( data => data[ 'tracks' ] ) );
   }
 }
