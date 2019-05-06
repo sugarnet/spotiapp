@@ -8,7 +8,7 @@ import { Source } from 'webpack-sources';
 })
 export class SpotifyService {
 
-  token = 'BQCQE8p6mqXdi7DgDKf0C_33EWzVLjazTaOHolGD4vWd9EUWTuhrg2n_wFfR-LUIADj38CUzdy_Mx-IBigc';
+  token = 'BQBXZHOk0ICebj_7nK2Ko8pKstaocR-WsiDFcGej0GiyYYldd3mYPyUHqEVeQ5QYz0tGZ8kmDGM5FJ6jNLA';
 
   constructor( private http: HttpClient ) {
   }
