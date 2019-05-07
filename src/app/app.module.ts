@@ -18,6 +18,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { ErrorComponent } from './components/shared/error/error.component';
 
 
 
@@ -31,7 +32,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     NoimagePipe,
     DomseguroPipe,
     TarjetasComponent,
-    LoadingComponent
+    LoadingComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
